@@ -1,28 +1,28 @@
 'use strict'
-// // // *****  Kintamųjų inicijavimas  ************************************************
-// // console.log('*****  Kintamųjų inicijavimas  **************************');
-// // // 1. Sukurti 3 kintamuosius su skaičiaus tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
-// // const a1 = 123;
-// //     console.log(a1);
-// // const a2 = 456;
-// //     console.log(a2);
-// // const a3 = 789;
-// //     console.log(a3);
-// // const a4 = 123;
-// //     console.log(a4);
+// // *****  Kintamųjų inicijavimas  ************************************************
+// console.log('*****  Kintamųjų inicijavimas  **************************');
+// // 1. Sukurti 3 kintamuosius su skaičiaus tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
+// const a1 = 123;
+//     console.log(a1);
+// const a2 = 456;
+//     console.log(a2);
+// const a3 = 789;
+//     console.log(a3);
+// const a4 = 123;
+//     console.log(a4);
 
-// // // 2. Sukurti 3 kintamuosius su teksto tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
-// // const b1 = 'abcd';
-// //     console.log(b1);
-// // const b2 = 'qwertyuiop[]';
-// //     console.log(b2);
-// // const b3 = 'uvwxyz';
-// //     console.log(b3);
-// // const b4 = 'klmn';
-// //     console.log(b4);
+// // 2. Sukurti 3 kintamuosius su teksto tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
+// const b1 = 'abcd';
+//     console.log(b1);
+// const b2 = 'qwertyuiop[]';
+//     console.log(b2);
+// const b3 = 'uvwxyz';
+//     console.log(b3);
+// const b4 = 'klmn';
+//     console.log(b4);
 
 
-// // // 3. Sukurti 3 sąrašo tipo kintamuosius su penkiomis skaičių tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
+// // 3. Sukurti 3 sąrašo tipo kintamuosius su penkiomis skaičių tipo reikšmėmis Po kiekvieno jų inicijavimo, išvesti į console
 // const c1 = [1,2,3,4,5];
 //     console.log(c1);
 // const c2 = [6,7,8,9,0];
@@ -161,30 +161,30 @@
 
 
 // Suskaičiuoti, kiek nurodytame intervale yra skaičių, kurie dalijasi be liekanos iš 3, 5 ir 7 atskirai:
-// // intervalas nuo -18 iki 18
-// const nuo = -18;
-// const iki = 18;
-// const dalikliai = [3, 5, 7, 99];
-// const dalLen = dalikliai.length;
-// // // console.log (dalLen);
-// // let kiekis = 0;
-// // console.log("dalikliu masyvas")
-// // for (let i=0; i<dalLen; i++){ console.log(dalikliai[i]) }
+// intervalas nuo -18 iki 18
+const nuo = 1
+const iki = 10
+// 1000000000 -> 18 sekundziu 
+const dalikliai = [3, 5, 7, 99];
+const dalLen = dalikliai.length;
+console.log("dalikliu masyvas   " + dalikliai)
+console.log ("dalikliu masyvo ilgis " + dalLen)
+for (let i=0; i<dalLen; i++){ console.log(dalikliai[i]) }
 
 // // // Mano variantas   *****   NEEFEKTYVIAUSIAS metodas   **********************************
 
-// // for(let i=0; i<dalLen; i++ ){
-// //     let sk1 = 0;
-// //     for(let j=nuo; j<=iki; j++ ){
-// //         let dl1 = j / dalikliai[i]
-// //         let dl2 = Math.floor(dl1)
-// //         // let dl2 = j % i  //  % duoda dalybos liekana:  8 % 3 = 2
-// //         // console.log(i+' '+j+'    '+dl1+'  '+dl2+' '+sk1);
-// //         if (dl1 === dl2) kiekis++
-// //     console.log('Skaičiai intervale nuo '+nuo+' iki '+iki+' iš '+dalikliai[i]+" be liekanos dalinasi "+sk1+" skaičių")
-// //     }
-// // }
-// // **********************NEEFEKTYVIAUSIO metodo pabaiga   **********************************
+for(let i=0; i<dalLen; i++ ){
+    let sk1 = 0;
+    for(let j=nuo; j<=iki; j++ ){
+        let dl1 = j / dalikliai[i]
+        let dl2 = Math.floor(dl1)
+        // let dl2 = j % i  //  % duoda dalybos liekana:  8 % 3 = 2
+        // console.log(i+' '+j+'    '+dl1+'  '+dl2+' '+sk1);
+        if (dl1 === dl2) sk1++
+    }
+    console.log('Skaičiai intervale nuo '+nuo+' iki '+iki+' iš '+dalikliai[i]+" be liekanos dalinasi "+sk1+" skaičių")
+}
+// **********************NEEFEKTYVIAUSIO metodo pabaiga   **********************************
 
 // console.log('')
 // console.log('')
@@ -300,7 +300,7 @@
 
 
 // console.log("***************************************************")
-// console.log("***     didziausias skaicius sarase     nebaigtas        ***")
+// console.log("***     didziausias skaicius sarase             ***")
 // console.log("***************************************************")
 
 // function didziausiasSkaiciusSarase(number){
